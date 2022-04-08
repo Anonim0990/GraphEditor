@@ -44,12 +44,14 @@ namespace lab
             this.buttonLoad = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.Map = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Map)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -69,10 +71,9 @@ namespace lab
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.tableLayoutPanel3);
             this.groupBox1.Controls.Add(this.buttonDeleteAll);
             this.groupBox1.Controls.Add(this.buttonDeleteV);
-            this.groupBox1.Controls.Add(this.kolorek);
-            this.groupBox1.Controls.Add(this.buttonColor);
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
@@ -160,6 +161,13 @@ namespace lab
             this.Map.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Map_MouseMove);
             this.Map.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Map_MouseUp);
             // 
+            // tableLayoutPanel3
+            // 
+            resources.ApplyResources(this.tableLayoutPanel3, "tableLayoutPanel3");
+            this.tableLayoutPanel3.Controls.Add(this.buttonColor, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.kolorek, 1, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -173,6 +181,7 @@ namespace lab
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Map)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -194,6 +203,7 @@ namespace lab
         private System.Windows.Forms.Button kolorek;
         private System.Windows.Forms.Button buttonDeleteAll;
         private System.Windows.Forms.Button buttonDeleteV;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
     }
 }
 

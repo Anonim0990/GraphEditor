@@ -483,9 +483,16 @@ namespace lab
             var Localization = this.Location;
             var Size = this.Size;
             resources.ApplyResources(this, "$this");
-            Change(resources, this.Controls);
+            Controls.Clear();
+            InitializeComponent();
             this.Location = Localization;
             this.Size = Size;
+
+            NewMap = new Bitmap(Map.Size.Width, Map.Size.Height);
+            Map.Image = NewMap;
+            DrawE();
+            DrawV();
+
         }
 
         private void buttonEng_Click(object sender, EventArgs e)
@@ -495,23 +502,17 @@ namespace lab
             var Localization = this.Location;
             var Size = this.Size;
             resources.ApplyResources(this, "$this");
-            Change(resources, this.Controls);
+            Controls.Clear();
+            InitializeComponent();
             this.Location = Localization;
             this.Size = Size;
+
+            NewMap = new Bitmap(Map.Size.Width, Map.Size.Height);
+            Map.Image = NewMap;
+            DrawE();
+            DrawV();
         }
 
-        private void Change(ComponentResourceManager resources, Control.ControlCollection controls)
-        {
-            foreach (Control control in controls)
-            {
-                var Localization = control.Location;
-                var Size = control.Size;
-                
-                if (control.GetType() != typeof(TableLayoutPanel)) resources.ApplyResources(control, control.Name);
-                Change(resources, control.Controls);
-                control.Location = Localization;
-                control.Size = Size;
-            }
-        }
+
     }
 }
