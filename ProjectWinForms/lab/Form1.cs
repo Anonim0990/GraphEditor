@@ -75,8 +75,10 @@ namespace lab
                 {
                     foreach (var v in V)
                     {
+                        if (v.x == choosenOne.x && v.y == choosenOne.y) continue;
                         if ((e.X - v.x) * (e.X - v.x) + (e.Y - v.y) * (e.Y - v.y) < R * R)
                         {
+                            
                             if (!E.Contains((choosenOne.x, choosenOne.y, v.x, v.y)) || !E.Contains((v.x, v.y, choosenOne.x, choosenOne.y)))
                             {
                                 E.Add((choosenOne.x, choosenOne.y, v.x, v.y));
