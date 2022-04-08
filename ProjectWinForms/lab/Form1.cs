@@ -49,6 +49,8 @@ namespace lab
        
         public Form1()
         {
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("pl-PL");
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("pl-PL");
             InitializeComponent();
             NewMap = new Bitmap(Map.Size.Width, Map.Size.Height);
             Map.Image = NewMap;
@@ -469,6 +471,44 @@ namespace lab
                     }
                 }
 
+            }
+        }
+
+        private void buttonPl_Click(object sender, EventArgs e)
+        {
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("pl-PL");
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("pl-PL");
+            var Localization = this.Location;
+            var Size = this.Size;
+            resources.ApplyResources(this, "$this");
+            Change(resources, this.Controls);
+            this.Location = Localization;
+            this.Size = Size;
+        }
+
+        private void buttonEng_Click(object sender, EventArgs e)
+        {
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-GB");
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-GB");
+            var Localization = this.Location;
+            var Size = this.Size;
+            resources.ApplyResources(this, "$this");
+            Change(resources, this.Controls);
+            this.Location = Localization;
+            this.Size = Size;
+        }
+
+        private void Change(ComponentResourceManager resources, Control.ControlCollection controls)
+        {
+            foreach (Control control in controls)
+            {
+                var Localization = control.Location;
+                var Size = control.Size;
+                
+                if (control.GetType() != typeof(TableLayoutPanel)) resources.ApplyResources(control, control.Name);
+                Change(resources, control.Controls);
+                control.Location = Localization;
+                control.Size = Size;
             }
         }
     }

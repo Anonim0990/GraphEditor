@@ -6,20 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "LabyWINFORMS/1.0.0": {
+      "lab/1.0.0": {
         "runtime": {
-          "LabyWINFORMS.dll": {}
-        },
-        "resources": {
-          "en-GB/LabyWINFORMS.resources.dll": {
-            "locale": "en-GB"
-          }
+          "lab.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "LabyWINFORMS/1.0.0": {
+    "lab/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

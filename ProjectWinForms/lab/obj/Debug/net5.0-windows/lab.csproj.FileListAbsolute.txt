@@ -16,3 +16,6 @@ C:\Users\Komputer\Desktop\lab\lab\lab\obj\Debug\net5.0-windows\lab.dll
 C:\Users\Komputer\Desktop\lab\lab\lab\obj\Debug\net5.0-windows\ref\lab.dll
 C:\Users\Komputer\Desktop\lab\lab\lab\obj\Debug\net5.0-windows\lab.pdb
 C:\Users\Komputer\Desktop\lab\lab\lab\obj\Debug\net5.0-windows\lab.genruntimeconfig.cache
+C:\Users\Komputer\Desktop\lab\lab\lab\bin\Debug\net5.0-windows\en\lab.resources.dll
+C:\Users\Komputer\Desktop\lab\lab\lab\obj\Debug\net5.0-windows\lab.Form1.en.resources
+C:\Users\Komputer\Desktop\lab\lab\lab\obj\Debug\net5.0-windows\en\lab.resources.dll
