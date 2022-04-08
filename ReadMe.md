@@ -1,6 +1,6 @@
 # Edytor Grafów 
 
-# funkcjonalność: 
+# Funkcjonalność: 
 
 - Kliknięcie lewym przyciskiem myszy w obszar roboczy powoduje dodanie wierzchołka.
 - Pierwsze kliknięcie prawym przyciskiem myszy w dany wierzchołek powoduje jego zaznaczenie. Drugie kliknięcie myszy (w dowolnym miejscu obszaru roboczego) spowoduje usnięcie zaznaczenia wierzchołka.
